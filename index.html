@@ -1,68 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-
-<body>
-    <div class="header">
-        <h1>Work Day Scheduler</h1>
-    </div>
-    <div id="bar"></div>
-    <div id="border">
-        <div id="current-time"></div>
+  <body>
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="time"></div>
     <div class="container">
-        <div class="times">
-           
-            <div>9 a.m.</div>
-            <div>10 a.m.</div>
-            <div>11 a.m.</div>
-            <div>12 p.m.</div>
-            <div>1 p.m.</div>
-            <div>2 p.m.</div>
-            <div>3 p.m.</div>
-            <div>4 p.m.</div>
-            <div>5 p.m.</div>
-            
-        </div>
-        <div class="todo">
-           
-            <div><input type="text" id="button1"></div>
-            <div><input type="text" id="button1"></div>
-            <div><input type="text" id="button2"></div>
-            <div><input type="text" id="button3"></div>
-            <div><input type="text" id="button4"></div>
-            <div><input type="text" id="button5"></div>
-            <div><input type="text" id="button6"></div>
-            <div><input type="text" id="button7"></div>
-            <div><input type="text" id="button8"></div>
-            
-          
-        </div>
-        <div class="box">
-            
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            <div id="button8" onclick="saveText()">Save</div>
-            
-        </div>
-    </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <!-- Timeblocks go here -->
+      <div class="row">
+        <div class="hour" id="09">9 am</div>
+        <input class="description" id="nineD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="10">10 am</div>
+        <input class="description" id="tenD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="11">11 am</div>
+        <input class="description" id="elevenD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="12">12 pm</div>
+        <input class="description" id="twelveD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="13">1 pm</div>
+        <input class="description" id="oneD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="14">2 pm</div>
+        <input class="description" id="twoD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="15">3 pm</div>
+        <input class="description" id="threeD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="16">4 pm</div>
+        <input class="description" id="fourD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+      <div class="row">
+        <div class="hour" id="17">5 pm</div>
+        <input class="description" id="fiveD">
+        <div class="saveBtn">savebtn</div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>

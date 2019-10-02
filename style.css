@@ -1,53 +1,75 @@
-* {
-    box-sizing: border-box;
-}
-.header {
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1;
+  }
+  
+  textarea{
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    border-left: 1px solid black;
+    padding: 10px;
+  }
+  
+  .jumbotron {
     text-align: center;
-}
-
-#bar {
-    height:10px;
-    background-color: black;
-}
-#current-time {
-  padding: 20px;
-  text-align: center;
-}
-.container {
-    width:90%;
-    height: 500px;
-    margin: 2% auto;
-    overflow: scroll;
-    display: grid;
-    grid-template-columns: 10% 75% 10%;
-}
-.container div {
+    background-color: transparent;
+    color: black;
+    border-radius: 0;
+    border-bottom: 10px solid black;
+  }
+  
+  .description{
+    white-space: pre-wrap;
+    width:75%;
+  }
+  
+  .time-block{
     text-align: center;
-    display: grid;
-    grid-auto-rows: 60px;
-    grid-row-gap: 3px;
-    border: 1px solid rgb(255, 255, 255);
     border-radius: 15px;
-}
-.times div {
-  background-color: #c0ffad;
-  color: #000000;
-}
-.todo div {
-    background-color: rgb(161, 161, 255);
-}
-
-.box div {
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
-.box div:hover {
-    background-color: rgb(198, 198, 255);
-    transition: all .1s ease-in-out;
   }
-  .box div:active {
-    background-color: rgb(110, 110, 253);
-    transition: all .1s ease-in-out;
+  
+  .row {
+    white-space: pre-wrap;
+    height: 80px;
+    border-top: 1px solid white;;
   }
+  
+  .hour {
+    background-color: #ffffff;
+    color: #000000;
+    border-top: 1px dashed #000000;
+    width:10%;
+  }
+  
+  .past {
+    background-color: #d3d3d3;
+    color: white;
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: white;
+  }
+  
+  .saveBtn {
+    border-left: 1px solid black;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #06AED5;
+    color: white;
+    width: 10%;
+  }
+  
+  .saveBtn:hover {
+    font-size: 20px;
+    transition: all .3s ease-in-out;
+  }
+  
