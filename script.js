@@ -13,61 +13,149 @@ function startClock() {
 }
 startClock();
 
+//Start of time block colors
 var compareTime = moment();
 compareTime = compareTime.format('HH');
 parseInt(compareTime);
 //compare the time blocks
+var specificHour;
+var theNum;
 function timeBlocks() {
     var theHours = $(".row").find(".hour");
     //loop thru and compare each time
     for (var i=0; i<theHours.length;i++){
         //gets id of each hour
-        var specificHour = theHours[i].id;
-        var theNum = parseInt(specificHour);
+        specificHour = theHours[i].id;
+        theNum = parseInt(specificHour);
         //console.log(specificHour);
-        if(theNum<12) {
-           theHours[i].style.background = "red";
+        if(theNum<compareTime) {
+           
            var sibling = theHours[i].nextElementSibling
-           sibling.style.background = "red";
+           sibling.style.background = "lightblue";
 
            
-        } else if (theNum===12) {
-            theHours[i].style.background = "blue";
+        } else if (theNum==compareTime) {
+            
            var sibling = theHours[i].nextElementSibling
-           sibling.style.background = "blue";
+           sibling.style.background = "rgb(248,95,133)";//pink
         } else {
-            theHours[i].style.background = "yellow";
+            
            var sibling = theHours[i].nextElementSibling
-           sibling.style.background = "yellow";
+           sibling.style.background = "rgb(248,215,114)";//tan
         }
     }
-    //runs through each hour to see if its earlier or later
-   /* for (var i = 0; i<theHours; i++){
-        var specificHour = theHours[i].attr('id');
-        parseInt(specificHour);
-        if(specificHour<compareTime){
-            console.log("its earlier");
-        } else{
-            console.log("its later");
-        }
-    }*/
+    
 
 }
 timeBlocks();
 
-
-
-
-
-
+/*
 
 //when user hits save button. take input and save it to that box
 $(".saveBtn").on("click", function(){
+    
     var inputBox = $(this).parent().find('input');
     var userInput = $(this).parent().find('input').val();
-    var idOfBox = inputBox.attr('id');
+    console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    console.log(idOfInput);
+    var
+    
+    //localStorage.setItem("", userInput);
+    //var idOfBox = inputBox.attr('id');
     //$('#test').id()
     // need to save to storage
+    //key equals hour. how do i get the hour id into the set("....")
+});*/
+$("#0").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("0", userInput);
+
+});
+$("#1").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("1", userInput);
+
+});
+$("#2").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("2", userInput);
+
+});
+$("#3").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("3", userInput);
+
+});
+$("#4").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("4", userInput);
+
+});
+$("#5").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("5", userInput);
+
+});
+$("#6").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("6", userInput);
+
+});
+$("#7").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("7", userInput);
+
+});
+$("#8").on("click", function(){
+    
+    var inputBox = $(this).parent().find('input');
+    var userInput = $(this).parent().find('input').val();
+    //console.log(userInput);
+    var idOfInput=inputBox.attr('id')
+    //console.log(idOfInput);
+    localStorage.setItem("8", userInput);
+
 });
 
 
@@ -76,6 +164,25 @@ $(".saveBtn").on("click", function(){
 
 
 //on page load, get storage and put it in
+
+var theData = localStorage.getItem("0");
+$("#20").val(theData);
+var theData = localStorage.getItem("1");
+$("#21").val(theData);
+var theData = localStorage.getItem("2");
+$("#22").val(theData);
+var theData = localStorage.getItem("3");
+$("#23").val(theData);
+var theData = localStorage.getItem("4");
+$("#24").val(theData);
+var theData = localStorage.getItem("5");
+$("#25").val(theData);
+var theData = localStorage.getItem("6");
+$("#26").val(theData);
+var theData = localStorage.getItem("7");
+$("#27").val(theData);
+var theData = localStorage.getItem("8");
+$("#28").val(theData);
 
 
 
